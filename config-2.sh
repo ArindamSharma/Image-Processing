@@ -27,13 +27,13 @@ echo 'Train Data '$((100-$p))'% = '$(($total-$r))
 
 a=${r}',$d'
 b=${r}',$p'
-# ls ima*.txt | sed 's/i/custom_data\\image\\i/'
-ls ima*.txt | sed 's/i/custom_data\\images\\i/' | sed $a >>../darknet/custom_data/test.txt
+ls ima*.txt | sed 's/i/custom_data\\image\\i/'
+ls ima*.txt | sed 's/i/custom_data\\images\\i/' | sed $a | sed 's/.txt/.jpg/g' >>../darknet/custom_data/test.txt
 echo "Test data created"
 # ls ima*.txt | sed 's/i/custom_data\\image\\i/' | sed '7,$d'
 # echo "hello"
 # ls ima*.txt | sed 's/i/custom_data\\image\\i/' | sed -n '7,$p'
-ls ima*.txt | sed 's/i/custom_data\\images\\i/' | sed -n $b >>../darknet/custom_data/train.txt
+ls ima*.txt | sed 's/i/custom_data\\images\\i/' | sed -n $b | sed 's/.txt/.jpg/g' >>../darknet/custom_data/train.txt
 echo "Train data created"
 
 var1=$(ls im*.txt |  sed 's/.txt/.jpg/')
@@ -105,7 +105,3 @@ done
 echo "config finished"
 printf "============================\n"
 cd ../
-
-
-# echo "Traning Starting "
-# ./darknet detector train ../custom_data/detector.data ../custom_data/cfg/yolov3-custom.cfg darknet53.conv.74
