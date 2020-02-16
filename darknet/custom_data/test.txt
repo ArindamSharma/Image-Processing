@@ -1,5 +1,5 @@
-custom_data\images\image(101).txt
-custom_data\images\image(103).txt
-custom_data\images\image(107).txt
-custom_data\images\image(11).txt
-custom_data\images\image(127).txt
+custom_data\images\image(101).jpg
+custom_data\images\image(103).jpg
+custom_data\images\image(107).jpg
+custom_data\images\image(11).jpg
+custom_data\images\image(127).jpg
