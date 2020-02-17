@@ -27,7 +27,7 @@ echo 'Train Data '$((100-$p))'% = '$(($total-$r))
 
 a=${r}',$d'
 b=${r}',$p'
-ls ima*.txt | sed 's/i/custom_data\\image\\i/'
+# ls ima*.txt | sed 's/i/custom_data\\image\\i/'
 ls ima*.txt | sed 's/i/custom_data\\images\\i/' | sed $a | sed 's/.txt/.jpg/g' >>../darknet/custom_data/test.txt
 echo "Test data created"
 # ls ima*.txt | sed 's/i/custom_data\\image\\i/' | sed '7,$d'
@@ -44,7 +44,7 @@ var2=$(ls im*.txt)
 cp $var2 ../darknet/custom_data/images
 echo "images data copyed"
 
-cat classes.txt >> ../darknet/custom_data/custom.name
+cat classes.txt >> ../darknet/custom_data/custom.names
 echo "lables created"
 
 var3=$(cat classes.txt | wc -l)
