@@ -1,3 +1,0 @@
-custom_data\images\image(18).jpg
-custom_data\images\image(22).jpg
-custom_data\images\image(4).jpg
