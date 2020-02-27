@@ -7,3 +7,5 @@ cd ../
 make
 rm .git -R
 rm README.md
+cd ../../
+wget https://pjreddie.com/media/files/darknet53.conv.74
