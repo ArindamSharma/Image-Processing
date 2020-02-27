@@ -89,7 +89,7 @@ cd ../darknet/custom_data/cfg
 sed -i "20s/m/max_batches= $iter # m/g" $file
 
 var13="$((80*$iter/100)),$((90*$iter/100))"
-sed -i "22s/s/steps= $var13 # s/g" $file
+sed -i "22s/s.*/steps= $var13/g" $file
 
 var14=$(sed -n '/yolo/=' $file) 
 var15=$(( ($var3+5)*3 ))
