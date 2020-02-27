@@ -24,7 +24,7 @@ r=$(($total*$p/100))
 
 echo "Test Data "$p'% = '$r 
 echo 'Train Data '$((100-$p))'% = '$(($total-$r))
-
+r=$(($r+1))
 a=${r}',$d'
 b=${r}',$p'
 # ls ima*.txt | sed 's/i/custom_data\\image\\i/'

@@ -6,3 +6,4 @@ cd ../
 # rm .git
 make
 rm .git -R
+rm README.md
