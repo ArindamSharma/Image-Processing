@@ -51,11 +51,6 @@ echo "labels created"
 
 var3=$(cat classes.txt | wc -l)
 echo "classes="$var3 >>../../darknet/custom_data/detector.data
-# echo "train=custom_data/train.txt" >> ../custom_data/detector.data
-# echo "valid=custom_data/test.txt" >> ../custom_data/detector.data
-# echo "names=custom_data/custom.names" >> ../custom_data/detector.data
-# echo "backup=backup/" >> ../custom_data/detector.data
-
 echo "train=custom_data/train.txt
 valid=custom_data/test.txt
 names=custom_data/custom.names
@@ -68,9 +63,9 @@ mkdir ../../darknet/custom_data/cfg
 # 2.Yolo V2
 # 3.Yolo V3"
 # read -p "Choice :- " var4
-iter=500
+# iter=1
 # iter=4000
-# iter=502000
+iter=502000
 var4=4
 if [ $var4 == '1' ]
 then
@@ -93,6 +88,7 @@ cd ../../darknet/custom_data/cfg
 sed -i "20s/m/max_batches= $iter # m/g" $file
 
 var13="$((80*$iter/100)),$((90*$iter/100))"
+echo $var13
 sed -i "22s/s.*/steps= $var13/g" $file
 
 var14=$(sed -n '/yolo/=' $file) 
