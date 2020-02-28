@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "If you are running that means you have created a traning data set folder with all images and respective txt file of same name"
+echo "NOTE!, it is assumed that you have a folder called training that contains both the images and the necesary text files obtained from training."$'\n'
 # read -p "enter the folder name :- " dir
 dir="traning"
 cd ../darknet
