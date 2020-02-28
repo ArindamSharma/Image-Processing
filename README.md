@@ -9,16 +9,16 @@ Using Yolo and Darknet as the underlying codebase
 ## 
 NOTE !! : Before running you should have a DIRECORY called “training” (without he quotes) that contains all the images with the respictive txt file (having the same name ,i.e for an image image1.png the text file will be named image1.txt) and a classes.txt file (contains all the classifier names). The txt files can be generated through various softwares, but for our work we had used LabelImg.
 
-### Run [config-1.sh](##config1) only once
+### Run [config-1.sh](config-1.sh) only once
 It will download the necessary files from the darknet git hub repository and also a pre-trained architecture from darknet’s official website darknet53.conv.74 .(Total Download 166 MB.)
 
-### Run [config-2.sh](##config2)
+### Run [config-2.sh](config-2.sh)
 It should be run whenever an update is made to the training directory.It collects all the new information and updates the necessay files that will be created inside darknet to train or test.
 
-### Run [config-3.sh](##config3)
+### Run [config-3.sh](config-3.sh)
 To start the training process. (Make sure to run this again if any updates to the data sets are made and new weights are required.
 
-### Run [config-4.sh](##config4) 
+### Run [config-4.sh](config-4.sh) 
 To try detect an image from the trained data.
 
 inside config-4 we initailly need to insert 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "NOTE!, it is assumed that you have a folder called training that contains both the images and the necesary text files obtained from training."$'\n'
+echo "NOTE!, it is assumed that you have a folder called training that contains both the images and the necesary text files obtained from training."
 # read -p "enter the folder name :- " dir
 dir="traning"
 cd ../darknet
