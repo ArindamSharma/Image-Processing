@@ -5,13 +5,13 @@ Using Yolo and Darknet as the underlying codebase
 ## 
 before running you should have your own training Directory having all images withe respictive txt file(of same name) and a classes.txt file
 
-### Run config-1.sh only once
+### Run [config-1.sh](##config1) only once
 File will download few required Files.
-### Run config-2.sh 
+### Run [config-2.sh](##config2)
 when ever there is a new traning data set.
-### Run config-3.sh 
+### Run [config-3.sh](##config3)
 when ever traning new data set is Required.
-### Run config-4.sh 
+### Run [config-4.sh](##config4) 
 when detection a image with our custom training data set.
 
 inside config-4 we initailly need to insert 
@@ -26,14 +26,8 @@ inside config-4 we initailly need to insert
 ./config-3.sh
 ./config-4.sh
 ```
-## What each config files are doing 
-[ config-1 ](#config1.sh)
-
-[ config-2 ](##config2)
-
-[ config-3 ](##config3)
-
-[ config-4 ](##config4)
+### What each config files are doing 
+[ config-1 ](#config1.sh),[ config-2 ](##config2),[ config-3 ](##config3),[ config-4 ](##config4)
 
 # Description of each Files
 ## config1
