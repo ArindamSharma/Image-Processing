@@ -39,6 +39,9 @@ inside config-4 we initailly need to insert
 
 # Description of each Files
 ## config1
+clone the darknet repository https://github.com/pjreddie/darknet
+
+then get default weight files from https://pjreddie.com/media/files/darknet53.conv.74
 ## config2
 ## config3
 ## config4
