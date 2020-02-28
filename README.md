@@ -7,7 +7,7 @@ Using Yolo and Darknet as the underlying codebase
 ## 
 NOTE !! : Before running you should have a DIRECORY called “training” (without he quotes) that contains all the images with the respictive txt file (having the same name ,i.e for an image image1.png the text file will be named image1.txt) and a classes.txt file (contains all the classifier names). The txt files can be generated through various softwares, but for our work we had used LabelImg.
 
-### Run [config-1.sh] (##config1) only once
+### Run [config-1.sh](##config1) only once
 It will download the necessary files from the darknet git hub repository and also a pre-trained architecture from darknet’s official website darknet53.conv.74 .
 
 ### Run [config-2.sh](##config2)
