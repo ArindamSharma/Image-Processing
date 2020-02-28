@@ -4,13 +4,13 @@ Using Yolo and Darknet as the underlying codebase
 #
 *Used :-*[Darknet](https://github.com/pjreddie/darknet),[Darknet Architecture](https://pjreddie.com/media/files/darknet53.conv.74),[OpenCV](https://gist.github.com/8082bfe067b202b9162c419eb716582a.git)
 
-*Refrence*:- [Link](https://blog.francium.tech/custom-object-training-and-detection-with-yolov3-darknet-and-opencv-41542f2ff44e)
+*Refrence*:- [Custom object training and detection with YOLOv3, Darknet and OpenCV](https://blog.francium.tech/custom-object-training-and-detection-with-yolov3-darknet-and-opencv-41542f2ff44e)
 
 ## 
 NOTE !! : Before running you should have a DIRECORY called “training” (without he quotes) that contains all the images with the respictive txt file (having the same name ,i.e for an image image1.png the text file will be named image1.txt) and a classes.txt file (contains all the classifier names). The txt files can be generated through various softwares, but for our work we had used LabelImg.
 
 ### Run [config-1.sh](##config1) only once
-It will download the necessary files from the darknet git hub repository and also a pre-trained architecture from darknet’s official website darknet53.conv.74 .
+It will download the necessary files from the darknet git hub repository and also a pre-trained architecture from darknet’s official website darknet53.conv.74 .(Total Download 166 MB.)
 
 ### Run [config-2.sh](##config2)
 It should be run whenever an update is made to the training directory.It collects all the new information and updates the necessay files that will be created inside darknet to train or test.
