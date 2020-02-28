@@ -1,24 +1,30 @@
-# Image-Processing
+﻿# Image-Processing
 Using Yolo and Darknet as the underlying codebase
+
 #
 *Refrence*:- [Link](https://blog.francium.tech/custom-object-training-and-detection-with-yolov3-darknet-and-opencv-41542f2ff44e)
-## 
-before running you should have your own training Directory having all images withe respictive txt file(of same name) and a classes.txt file
 
-### Run [config-1.sh](##config1) only once
-File will download few required Files.
+## 
+NOTE !! : Before running you should have a DIRECORY called “training” (without he quotes) that contains all the images with the respictive txt file (having the same name ,i.e for an image image1.png the text file will be named image1.txt) and a classes.txt file (contains all the classifier names). The txt files can be generated through various softwares, but for our work we had used LabelImg.
+
+### Run [config-1.sh] (##config1) only once
+It will download the necessary files from the darknet git hub repository and also a pre-trained architecture from darknet’s official website darknet53.conv.74 .
+
 ### Run [config-2.sh](##config2)
-when ever there is a new traning data set.
+It should be run whenever an update is made to the training directory.It collects all the new information and updates the necessay files that will be created inside darknet to train or test.
+
 ### Run [config-3.sh](##config3)
-when ever traning new data set is Required.
+To start the training process. (Make sure to run this again if any updates to the data sets are made and new weights are required.
+
 ### Run [config-4.sh](##config4) 
-when detection a image with our custom training data set.
+To try detect an image from the trained data.
 
 inside config-4 we initailly need to insert 
 - the image path which is going to be tested
 - the yolo custom cfg file path
 - the weights path which we created
 - the custom names file consist of all classes 
+
 ## How to Run .sh files
 ```bash
 ./config-1.sh
@@ -31,7 +37,6 @@ inside config-4 we initailly need to insert
 
 # Description of each Files
 ## config1
-
 ## config2
 ## config3
 ## config4
