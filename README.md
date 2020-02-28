@@ -27,7 +27,7 @@ inside config-4 we initailly need to insert
 ./config-4.sh
 ```
 ### What each config files are doing 
-[ config-1 ](#config1.sh),[ config-2 ](##config2),[ config-3 ](##config3),[ config-4 ](##config4)
+[ config-1 ](##config1),[ config-2 ](##config2),[ config-3 ](##config3),[ config-4 ](##config4)
 
 # Description of each Files
 ## config1
