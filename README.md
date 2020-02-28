@@ -2,6 +2,8 @@
 Using Yolo and Darknet as the underlying codebase
 
 #
+*Used :-*[Darknet](https://github.com/pjreddie/darknet),[Darknet Architecture](https://pjreddie.com/media/files/darknet53.conv.74),[OpenCV](https://gist.github.com/8082bfe067b202b9162c419eb716582a.git)
+
 *Refrence*:- [Link](https://blog.francium.tech/custom-object-training-and-detection-with-yolov3-darknet-and-opencv-41542f2ff44e)
 
 ## 
