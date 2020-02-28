@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "NOTE!, it is assumed that you have a folder called training that contains both the images and the necesary text files obtained from training."$'\n'
 # read -p "enter the folder name :- " dir
 dir="traning"
