@@ -11,7 +11,7 @@ else
 	len=${#var}
 	if [ $len == '4' ] ; then
 		echo "---Updating few files---"
-		rm temp -R
+		rm -R temp
 	else
 		echo "---Make sure Internet is there---"
 	fi
@@ -21,7 +21,15 @@ else
 	var2=$(ls)
 	mv $var2 ../darknet/$var2
 	cd ../
-	rm temp -R
+	rm -R temp
 fi
+f=darknet/opencv_yolo_detector.py
+echo "Updating Files"
+cd Image-Processing/sample
+locvar=$(ls *)
+cd ../../
+sed -i "/--image/s/='.*'/='..\/Image-Processing\/sample\/$locvar'/g" $f
+sed -i "/--config/s/='.*'/='custom_data\/cfg\/yolov3-custom.cfg'/g" $f
 
-# sed -n '/--image/s/=.*.jpg/=custom_data\\image\\image1.jpg/p' opencv_yolo_detector.py 
+# sed -n '/--weights/s/=.*.jpg/=custom_data\/custom.names/p' $f
+sed -i "/--names/s/='.*'/='custom_data\/custom.names'/g" $f

@@ -8,7 +8,7 @@ v=$(ls | grep custom_data)
 len=${#v}
 if [ $len == '11' ] ; then
 	echo "---Updating Custom Data Directory---"
-	rm custom_data -R
+	rm -R custom_data
 else
 	echo "---Making Custom Data Directory---"
 fi
@@ -65,7 +65,7 @@ mkdir ../../darknet/custom_data/cfg
 # 3.Yolo V3"
 # read -p "Choice :- " var4
 # iter=1
-iter=4000
+iter=2
 # iter=502000
 var4=4
 if [ $var4 == '1' ]
@@ -86,7 +86,7 @@ else
 fi
 cd ../../darknet/custom_data/cfg
 echo "Total Iterations :- "$iter
-sed -i "20s/m/max_batches= $iter # m/g" $file
+sed -i "20s/m.*/max_batches= $iter/g" $file
 
 var13="$((80*$iter/100)),$((90*$iter/100))"
 echo "steps :- "$var13

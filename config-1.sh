@@ -4,7 +4,7 @@ var=$(ls | grep darknet)
 len=${#var}
 if [ $len == '7' ] ; then
 	echo "---Make sure Internet is there---"
-	rm darknet -R
+	rm -R darknet
 else
 	echo "---Make sure Internet is there---"
 fi
@@ -14,6 +14,7 @@ sed -i "426s/str.*/strcpy(copy, s);/g" utils.c
 cd ../
 # rm .git
 make
-rm .git -R
+rm -R .git
 rm README.md
+echo "Downloading Darknet Architecture"
 wget https://pjreddie.com/media/files/darknet53.conv.74
