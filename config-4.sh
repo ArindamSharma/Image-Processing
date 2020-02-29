@@ -31,5 +31,8 @@ cd ../../
 sed -i "/--image/s/='.*'/='..\/Image-Processing\/sample\/$locvar'/g" $f
 sed -i "/--config/s/='.*'/='custom_data\/cfg\/yolov3-custom.cfg'/g" $f
 
-# sed -n '/--weights/s/=.*.jpg/=custom_data\/custom.names/p' $f
 sed -i "/--names/s/='.*'/='custom_data\/custom.names'/g" $f
+sed -i "/--weights/s/='.*'/='backup\/yolov3-custom_final.weights'/g" $f
+echo "---Starting Python Testor---"
+cd darknet
+python3 opencv_yolo_detector.py

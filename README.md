@@ -18,6 +18,7 @@ It should be run whenever an update is made to the training directory.It collect
 ### Run [config-3.sh](config-3.sh)
 To start the training process. (Make sure to run this again if any updates to the data sets are made and new weights are required.
 
+By this time you should have got a waight file in the backup folder. now to go further you need to have sample folder. inside that you must have only one image that will be used for testing as test data.
 ### Run [config-4.sh](config-4.sh) 
 To try detect an image from the trained data.
 
