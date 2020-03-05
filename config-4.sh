@@ -33,6 +33,7 @@ sed -i "/--config/s/='.*'/='custom_data\/cfg\/yolov3-custom.cfg'/g" $f
 
 sed -i "/--names/s/='.*'/='custom_data\/custom.names'/g" $f
 sed -i "/--weights/s/='.*'/='backup\/yolov3-custom_final.weights'/g" $f
+echo "Done updating"
 echo "---Starting Python Testor---"
 cd darknet
 python3 opencv_yolo_detector.py
