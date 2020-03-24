@@ -36,28 +36,11 @@ sed -i "/--weights/s/='.*'/='backup\/yolov3-custom_final.weights'/g" $f
 echo "Done updating"
 echo "---Starting Python Testor---"
 cd darknet
-var4=$(which pip)
-var5=$(which pip3)
-var5=${#var5}
-var4=${#var4}
-# var4=0
-# echo $var4 $var5 $(( $var4 && $var5 ))
-if [ $(( $var4 && $var5 )) == 1 ] ; then
-	echo "Found pip"
-	if [ $var5 != 0 ] ;then 
-		echo "pip3 there"
-		var6=$(pip3 list | grep opencv)
-		if [ ${#var6} == 0 ] ; then
-			echo "Open cv not present please install before procceding"
-		else
-			echo "Testing Image --"
-			python3 opencv_yolo_detector.py
-		fi
-	else
-		echo "pip3 not present "
-		echo "try installing pip3 "
-	fi
-else 
-	echo "You dont have pip installed in system"
-	echo "Kindly install pip3 and run again "
+var4=$(dpkg -l | grep opencv)
+if [ ${#var4} != 0 ] ; then
+	echo "Found opencv"
+	python3 opencv_yolo_detector.py
+else
+	echo "You dont have opencv installed in your system"
+	echo "Kindly install opencv and run again (dont install via pip)"
 fi
